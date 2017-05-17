@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Kiwwi</string>
+    <string name="tittle">List to do:</string>
+
+    <string name="title_activity_login">Welcome</string>
+
+
+    <string name="loading">"Carregant perfil"</string>
+
+    <string name="auth_failed">"L'autorització ha fallat"</string>
+    <string name="emailpassword_status_fmt">"Email : %1$s (verificat: %2$b)"</string>
+    <string name="firebase_status_fmt">"Usuari %s"</string>
+    <string name="signed_out">"Sessió tancada"</string>
+
+
+    <string name="infoButton">"About Kiwwi"</string>
+    <string name="login">"Login"</string>
+    <string name="signInGoogle">"Sign in with your account</string>
+    <string name="title_activity_prova">prova</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_verify_email">verifyEmailActivity</string>
+</resources>
