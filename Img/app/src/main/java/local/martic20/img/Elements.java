@@ -9,13 +9,11 @@ import java.util.List;
 
 public class Elements {
     String name;
-    String age;
     int photoId;
 
 
-    public Elements(String name, String age, int photoId) {
+    public Elements(String name,  int photoId) {
         this.name = name;
-        this.age = age;
         this.photoId = photoId;
     }
 

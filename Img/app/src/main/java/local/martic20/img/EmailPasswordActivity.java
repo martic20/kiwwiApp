@@ -17,6 +17,7 @@
 package local.martic20.img;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -37,6 +38,8 @@ import com.google.firebase.auth.FirebaseUser;
 public class EmailPasswordActivity extends BaseActivity  {
 
     private static final String TAG = "EmailPassword";
+    public static final String FILE = "dataFile";
+
 
     private EditText mEmailField;
     private EditText mPasswordField;
@@ -68,6 +71,9 @@ public class EmailPasswordActivity extends BaseActivity  {
                 //FirebaseUser user = firebaseAuth.getCurrentUser();
             }
         };
+
+
+
     }
 
     @Override
@@ -102,6 +108,11 @@ public class EmailPasswordActivity extends BaseActivity  {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser != null) {
             if (currentUser.isEmailVerified()) {
+                SharedPreferences settings = getSharedPreferences(FILE, 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString("userName", currentUser.getDisplayName());
+                editor.commit();
+
                 openMenu();
             }else{
                 Toast.makeText(EmailPasswordActivity.this, "Email not verified.",

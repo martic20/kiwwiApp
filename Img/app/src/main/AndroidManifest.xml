@@ -16,15 +16,16 @@
         <activity android:name=".EmailPasswordActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".rater"/>
-        <activity android:name=".BaseActivity"/>
-        <activity android:name=".InitialScreen"/>
-        <activity android:name=".About"/>
-        <activity
-            android:name=".verifyEmailActivity" />
+        <activity android:name=".rater" />
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".InitialScreen" />
+        <activity android:name=".About" />
+        <activity android:name=".verifyEmailActivity" />
+        <activity android:name=".Description_Activity"></activity>
     </application>
 
 </manifest>
