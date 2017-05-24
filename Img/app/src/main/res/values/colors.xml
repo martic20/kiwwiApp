@@ -9,4 +9,9 @@
     <color name="brown">#b16e20</color>
     <color name="shadow">#72000000</color>
     <color name="light">#9defefef</color>
+
+    <color name="text_title">#2e2e2e</color>
+    <color name="text_p">#707070</color>
+    <color name="text_small">#6c6c6c</color>
+    <color name="text_price">#4d4d4d</color>
 </resources>

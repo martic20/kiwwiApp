@@ -1,15 +1,15 @@
 package local.martic20.img;
 
-import android.graphics.drawable.Drawable;
-import android.media.Image;
-import android.net.Uri;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,8 +28,9 @@ public class Description_Activity extends AppCompatActivity {
     private TextView desc;
     private TextView price;
     private ImageView img;
+    private RatingBar rate;
 
-    private FirebaseDatabase database ;
+    private FirebaseDatabase database;
     private DatabaseReference myRef;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -42,27 +43,28 @@ public class Description_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description_);
-        ID =  getIntent().getIntExtra("ID",0);
-        Toast.makeText(Description_Activity.this, String.valueOf(ID),
-                Toast.LENGTH_SHORT).show();
-        name=(TextView)findViewById(R.id.name);
-        desc=(TextView)findViewById(R.id.desc);
-        type=(TextView)findViewById(R.id.type);
-        price=(TextView)findViewById(R.id.price);
+        ID = getIntent().getIntExtra("ID", 0);
 
+        name = (TextView) findViewById(R.id.name);
+        desc = (TextView) findViewById(R.id.desc);
+        type = (TextView) findViewById(R.id.type);
+        price = (TextView) findViewById(R.id.price);
+        img = (ImageView) findViewById(R.id.img);
+        rate =(RatingBar) findViewById(R.id.rate);
 
-
+        img.setImageResource(R.drawable.dish1);
 
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+
             }
         };
 
-         database = FirebaseDatabase.getInstance();
-         myRef = database.getReference("plats/"+String.valueOf(ID));
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("plats/" + String.valueOf(ID));
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -73,45 +75,47 @@ public class Description_Activity extends AppCompatActivity {
                 desc.setText(dataSnapshot.child("desc").getValue(String.class));
                 price.setText(dataSnapshot.child("price").getValue(String.class));
                 type.setText(dataSnapshot.child("type").getValue(String.class));
-
-                //the very very cutre implementation
-                //quick work
-                switch((ID+1)){
-                    case 1:
-                        img.setImageResource(R.drawable.dish1);
-                        break;
-                    case 2:
-                        img.setImageResource(R.drawable.dish2);
-                        break;
-                    case 3:
-                        img.setImageResource(R.drawable.dish3);
-                        break;
-                    case 4:
-                        img.setImageResource(R.drawable.dish4);
-                        break;
-
-                }
+                img.setImageResource(Elements.getImgId(ID));
+                findViewById(R.id.loading).setVisibility(View.GONE);
+                findViewById(R.id.img).setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onCancelled(DatabaseError error) {
                 Toast.makeText(Description_Activity.this, "No internet connection!!",
                         Toast.LENGTH_SHORT).show();
-                }
+            }
         });
 
         myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-        myToolbar.setNavigationIcon(R.drawable.mlogo);
         myToolbar.inflateMenu(R.menu.toolbar_menu);
         myToolbar.setTitleTextColor(0xEEEEEEEE);
 
+        rate.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            public void onRatingChanged(RatingBar ratingBar, float rating,
+                                        boolean fromUser) {
+                FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+                if (currentUser!=null) {
+                    DatabaseReference firebase = FirebaseDatabase.getInstance().getReference("users/" +currentUser.getUid()+"/valorations");
+                    firebase.child(String.valueOf(ID)).setValue(Math.round(rating));
+                    Toast.makeText(Description_Activity.this, "Valoration saved, "+Math.round(rating),
+                            Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(Description_Activity.this, "Error on saving valoration",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
     public void logOut() {
         mAuth.signOut();
         finish();
@@ -130,6 +134,7 @@ public class Description_Activity extends AppCompatActivity {
             System.exit(0);
         }
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

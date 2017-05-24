@@ -1,11 +1,14 @@
 package local.martic20.img;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -52,8 +55,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ElementViewHolder>
 
     List<Elements> elements;
 
+
     public MyAdapter(List<Elements> element){
         this.elements = element;
+
     }
 
     @Override
@@ -70,8 +75,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ElementViewHolder>
     @Override
     public void onBindViewHolder(ElementViewHolder personViewHolder, int i) {
         personViewHolder.personName.setText(elements.get(i).name);
+        personViewHolder.personPhoto.setImageResource(elements.get(i).img);
 
-        personViewHolder.personPhoto.setImageResource(elements.get(i).photoId);
     }
 
     @Override

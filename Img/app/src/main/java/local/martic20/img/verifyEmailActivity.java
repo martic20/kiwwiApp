@@ -14,6 +14,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class verifyEmailActivity extends BaseActivity {
 
@@ -24,6 +26,7 @@ public class verifyEmailActivity extends BaseActivity {
 
     private EditText mEmailField;
     private EditText mPasswordField;
+    private EditText mNameField;
 
 
     @Override
@@ -33,6 +36,7 @@ public class verifyEmailActivity extends BaseActivity {
 
         mEmailField = (EditText) findViewById(R.id.field_email);
         mPasswordField = (EditText) findViewById(R.id.field_password);
+        mNameField = (EditText) findViewById(R.id.field_name);
 
         ImageView logo = (ImageView) findViewById(R.id.logoImage);
         int orientation=this.getResources().getConfiguration().orientation;
@@ -73,6 +77,7 @@ public class verifyEmailActivity extends BaseActivity {
         }
         String email = mEmailField.getText().toString();
         String password = mPasswordField.getText().toString();
+        final String name = mNameField.getText().toString();
         showProgressDialog();
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -81,6 +86,8 @@ public class verifyEmailActivity extends BaseActivity {
                         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                         if (task.isSuccessful()) {
                             user.sendEmailVerification();
+                            DatabaseReference firebase = FirebaseDatabase.getInstance().getReference("users/" +user.getUid()+"/name");
+                            firebase.child("name").setValue(name);
                             Toast.makeText(verifyEmailActivity.this, "We have send a verification email",
                                     Toast.LENGTH_SHORT).show();
                             mAuth.signOut();
@@ -101,6 +108,13 @@ public class verifyEmailActivity extends BaseActivity {
 
     private boolean validateForm() {
         boolean valid = true;
+        String name = mNameField.getText().toString();
+        if (TextUtils.isEmpty(name)) {
+            mNameField.setError("Required.");
+            valid = false;
+        } else {
+            mNameField.setError(null);
+        }
         String email = mEmailField.getText().toString();
         if (TextUtils.isEmpty(email)) {
             mEmailField.setError("Required.");

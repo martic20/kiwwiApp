@@ -108,10 +108,7 @@ public class EmailPasswordActivity extends BaseActivity  {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser != null) {
             if (currentUser.isEmailVerified()) {
-                SharedPreferences settings = getSharedPreferences(FILE, 0);
-                SharedPreferences.Editor editor = settings.edit();
-                editor.putString("userName", currentUser.getDisplayName());
-                editor.commit();
+
 
                 openMenu();
             }else{
@@ -154,6 +151,7 @@ public class EmailPasswordActivity extends BaseActivity  {
     private void openMenu() {
         Intent intent = new Intent(this, InitialScreen.class);
         startActivity(intent);
+        finish();
     }
 
     public void register(View view) {

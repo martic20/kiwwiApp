@@ -1,5 +1,7 @@
 package local.martic20.img;
 
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,15 +10,40 @@ import java.util.List;
  */
 
 public class Elements {
-    String name;
-    int photoId;
+    public String name,desc, type,price;
+    public int img;
 
 
-    public Elements(String name,  int photoId) {
-        this.name = name;
-        this.photoId = photoId;
+    public Elements(String name,String desc,String type,String price,  int img) {
+       this.name = name;
+        this.desc=desc;
+        this.img = getImgId(img);
+        this.price=price;
+        this.type=type;
     }
 
+    public Elements(String name,String img) {
+        this.name = name;
+        this.desc="";
+        this.img = getImgId(Integer.valueOf(img));
+        this.price="";
+        this.type="";
+    }
+
+
+    public static int getImgId(int num){
+        switch(num){
+            case 0:
+                return R.drawable.dish1;
+            case 1:
+                return R.drawable.dish2;
+            case 2:
+                return R.drawable.dish3;
+            case 3:
+                return R.drawable.dish4;
+        }
+        return R.drawable.logo;
+    }
     // This method creates an ArrayList that has three Person objects
     // Checkout the project associated with this tutorial on Github if
     // you want to use the same images.
