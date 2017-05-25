@@ -51,6 +51,8 @@ public class InitialScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -97,6 +99,24 @@ public class InitialScreen extends AppCompatActivity {
             }
         });
 
+        DatabaseReference userName = database.getReference("users");
+        userName.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+                if (currentUser!=null) {
+                   myToolbar.setTitle(dataSnapshot.child(currentUser.getUid()).child("name").getValue().toString());
+
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(InitialScreen.this, "Database error: "+databaseError.getMessage(),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override
@@ -133,13 +153,13 @@ public class InitialScreen extends AppCompatActivity {
                         break;
 
                     case DialogInterface.BUTTON_NEGATIVE:
-                        //No button clicked
+                        finish();
                         break;
                 }
             }
         };
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Are you sure to logout?").setPositiveButton("Yes", dialogClickListener)
+        builder.setMessage("Do you want to logout?").setPositiveButton("Yes", dialogClickListener)
                 .setNegativeButton("No", dialogClickListener).show();
     }
 
@@ -161,6 +181,9 @@ public class InitialScreen extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.logout:
                 logOut();
+                return true;
+            case R.id.about:
+                startActivity(new Intent(InitialScreen.this,About.class));
                 return true;
             default:
                 // If we got here, the user's action was not recognized.

@@ -92,6 +92,26 @@ public class Description_Activity extends AppCompatActivity {
         myToolbar.inflateMenu(R.menu.toolbar_menu);
         myToolbar.setTitleTextColor(0xEEEEEEEE);
 
+
+
+        DatabaseReference userName = database.getReference("users");
+        userName.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+                if (currentUser!=null) {
+                    myToolbar.setTitle(dataSnapshot.child(currentUser.getUid()).child("name").getValue().toString());
+
+                    rate.setRating(Float.parseFloat(dataSnapshot.child(currentUser.getUid()).child("valorations").child(String.valueOf(ID)).getValue().toString()));
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(Description_Activity.this, "Database error: "+databaseError.getMessage(),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
         rate.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             public void onRatingChanged(RatingBar ratingBar, float rating,
                                         boolean fromUser) {
@@ -99,15 +119,14 @@ public class Description_Activity extends AppCompatActivity {
                 if (currentUser!=null) {
                     DatabaseReference firebase = FirebaseDatabase.getInstance().getReference("users/" +currentUser.getUid()+"/valorations");
                     firebase.child(String.valueOf(ID)).setValue(Math.round(rating));
-                    Toast.makeText(Description_Activity.this, "Valoration saved, "+Math.round(rating),
-                            Toast.LENGTH_SHORT).show();
+                    if(fromUser){Toast.makeText(Description_Activity.this, "Valoration saved, "+Math.round(rating),
+                            Toast.LENGTH_SHORT).show();}
                 }else{
                     Toast.makeText(Description_Activity.this, "Error on saving valoration",
                             Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
     }
 
     @Override
@@ -141,7 +160,9 @@ public class Description_Activity extends AppCompatActivity {
             case R.id.logout:
                 logOut();
                 return true;
-
+            case R.id.about:
+                startActivity(new Intent(Description_Activity.this,About.class));
+                return true;
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.

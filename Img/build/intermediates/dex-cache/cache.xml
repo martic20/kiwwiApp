@@ -2,292 +2,274 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-10.0.1_3dc770c19b7c2e863cc62f079dfe7ccf778f1164/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-10.0.1_be3e09bc83ea8c720a484018890e0e95885f6b2f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/marti.casas/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_8f340671403d4eb4f60a5e3cc2d2be95e3571fa1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-10.0.1_dfeb3cbf49ab647c59f3d2ed30d0a58b657e9106/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_7772d58977d6afe136f057d940c35ef3b1befc25/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_e15cb6547a6f1de7b1bf81ef6d665f29be33d236/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_a237f28dcb2aa0f91ac99ea2f408993963c15d45/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_654ebab941bfa48a47e9f4d89511eb20d437c72e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_2200e16b64aad668f29fab991ccd98d3d982311b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="480de0163365a1904c3c905195338017ea5933c7">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a4246ce65533ad4096852b85e0d167afb20ba3f6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_9e36d768c80a20e6f9df6599d078ad9493002212/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-10.0.1_b15ca68eb404b5aefac04edd4c398c0a71f3bea0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-10.0.1_2b8706c3f893e6049c6f9617f874ac321975f03d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_7addd512db8ec95f55912526da123b81354392fb/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-10.0.1_f986927e0776551301762eb7de51a10f29131190/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_4a3a2d2aef8ce022fdbe6c69bbdc6ab397815ec1/classes.dex" />
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/internal_impl-24.2.1_4a3a2d2aef8ce022fdbe6c69bbdc6ab397815ec1.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_e7e04594a4cc449d90954dca4f853898b982c018/classes.dex" />
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/internal_impl-24.2.1_e7e04594a4cc449d90954dca4f853898b982c018.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8308ed003522a2ee8958311afcc4cfd0470377cd">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-10.0.1_3edadade98996325e1e656319e6e926a13b7bbd8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_4ce4d2cac8aea2f9911b9682e9285af4b324dc7b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.0.1/jars/classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-10.0.1_78c0dad2065475123e05581d0383ad25a6c27525/classes.dex" />
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.google.firebase-firebase-iid-10.0.1_78c0dad2065475123e05581d0383ad25a6c27525.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/10.0.1/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
-        sha1="1ae5648de4ca0d54982c889df20ef12df7abb21b">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_6d9238cdf9b9817225df15d4597bb970a2ff77de/classes.dex" />
+        sha1="8308ed003522a2ee8958311afcc4cfd0470377cd">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-gcm-10.0.1_3edadade98996325e1e656319e6e926a13b7bbd8.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="6bb5d347ebc0c6ef3c83a905222a688da5d2f7b4">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-iid-10.0.1_10e602a25b0e476e94a5eaf85e8d1fff91cea7fe/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/jars/classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-10.0.1_6c59518e56953ad95ae503539bace8d571b04257/classes.dex" />
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-basement-10.0.1_6c59518e56953ad95ae503539bace8d571b04257.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-24.2.1_1977c5f3ebbad6a348a2a1b24ea8f98c73b30077/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_4209202d6233fb979dd8e1e4a67af12eb4222e3c/classes.dex" />
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.android.support-appcompat-v7-24.2.1_4209202d6233fb979dd8e1e4a67af12eb4222e3c.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.android.support-support-compat-24.2.1_4ce4d2cac8aea2f9911b9682e9285af4b324dc7b.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_17335e6a941332a481c15b6e3503dc7b14db0105/classes.dex" />
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.android.support-support-fragment-24.2.1_17335e6a941332a481c15b6e3503dc7b14db0105.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_68c116b14cb88feb08c19d4b13697b330452f2e8/classes.dex" />
+        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.android.support-cardview-v7-24.2.1_1977c5f3ebbad6a348a2a1b24ea8f98c73b30077.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/10.0.1/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/10.0.1/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
-        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-10.0.1_814ca82febfdf598f800b7a758bff6ccbb6317fe/classes.dex" />
+        sha1="6bb5d347ebc0c6ef3c83a905222a688da5d2f7b4">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-iid-10.0.1_10e602a25b0e476e94a5eaf85e8d1fff91cea7fe.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.0.1/jars/classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-10.0.1_43d9dfb8bb71855f3b9be64ff22f934b63ed110e/classes.dex" />
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.google.firebase-firebase-analytics-impl-10.0.1_43d9dfb8bb71855f3b9be64ff22f934b63ed110e.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.android.support-support-v4-24.2.1_68c116b14cb88feb08c19d4b13697b330452f2e8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.google.firebase-firebase-auth-10.0.1_814ca82febfdf598f800b7a758bff6ccbb6317fe.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_3c2afaaae9ae578b75dd36340e930e9204aac640/classes.dex" />
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/internal_impl-24.2.1_3c2afaaae9ae578b75dd36340e930e9204aac640.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_6806ea4002e942a4e69a92de44a2711390b0cf10/classes.dex" />
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.android.support-support-vector-drawable-24.2.1_6806ea4002e942a4e69a92de44a2711390b0cf10.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_688cdf97a83193fdb657bc1ad63354dc72f38c31/classes.dex" />
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.android.support-recyclerview-v7-24.2.1_688cdf97a83193fdb657bc1ad63354dc72f38c31.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marti.casas/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/support-annotations-24.2.1_8f340671403d4eb4f60a5e3cc2d2be95e3571fa1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.google.firebase-firebase-analytics-10.0.1_dfeb3cbf49ab647c59f3d2ed30d0a58b657e9106.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.google.firebase-firebase-database-connection-10.0.1_3dc770c19b7c2e863cc62f079dfe7ccf778f1164.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-base-10.0.1_be3e09bc83ea8c720a484018890e0e95885f6b2f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.android.support-support-media-compat-24.2.1_e15cb6547a6f1de7b1bf81ef6d665f29be33d236.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.android.support-design-24.2.1_7772d58977d6afe136f057d940c35ef3b1befc25.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.android.support-support-core-utils-24.2.1_a237f28dcb2aa0f91ac99ea2f408993963c15d45.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/internal_impl-24.2.1_654ebab941bfa48a47e9f4d89511eb20d437c72e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.android.support-animated-vector-drawable-24.2.1_9e36d768c80a20e6f9df6599d078ad9493002212.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.android.support-support-core-ui-24.2.1_2200e16b64aad668f29fab991ccd98d3d982311b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-tasks-10.0.1_b15ca68eb404b5aefac04edd4c398c0a71f3bea0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.google.firebase-firebase-common-10.0.1_2b8706c3f893e6049c6f9617f874ac321975f03d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/internal_impl-24.2.1_7addd512db8ec95f55912526da123b81354392fb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="/home/marti.casas/AndroidStudioProjects/Img/Img/app/build/intermediates/pre-dexed/release/com.google.firebase-firebase-database-10.0.1_f986927e0776551301762eb7de51a10f29131190.jar" />
     </item>
 
 </items>

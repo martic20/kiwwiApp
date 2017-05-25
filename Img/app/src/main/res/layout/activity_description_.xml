@@ -10,6 +10,7 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
+        android:title=""
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
@@ -132,7 +133,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                app:cardBackgroundColor="@color/green"
+                app:cardBackgroundColor="@color/rateBox"
                 app:cardCornerRadius="40dp"
                 app:cardElevation="4dp">
 

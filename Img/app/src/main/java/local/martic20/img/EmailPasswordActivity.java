@@ -16,9 +16,11 @@
 
 package local.martic20.img;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
@@ -34,6 +36,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 public class EmailPasswordActivity extends BaseActivity  {
 
@@ -136,9 +141,10 @@ public class EmailPasswordActivity extends BaseActivity  {
                             hideProgressDialog();
                             checkUser();
                         } else {
-                            Toast.makeText(EmailPasswordActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                            Toast.makeText(EmailPasswordActivity.this, "Authentication failed. Check your internet connection and if your email is verified ",
+                                        Toast.LENGTH_SHORT).show();
                             hideProgressDialog();
+
                         }
                     }
                 });

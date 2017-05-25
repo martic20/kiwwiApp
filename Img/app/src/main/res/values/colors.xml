@@ -2,13 +2,15 @@
 <resources>
     <color name="colorPrimary">#ffa800</color>
     <color name="colorPrimaryDark">#e76c00</color>
-    <color name="colorAccent">#1b940b</color>
-    <color name="colorRate">#ffba19</color>
+    <color name="colorRate">#1b940b</color>
+    <color name="colorAccent">#ffc400</color>
     <color name="green">#a0c63b</color>
     <color name="white">#fff</color>
     <color name="brown">#b16e20</color>
     <color name="shadow">#72000000</color>
     <color name="light">#9defefef</color>
+    <color name="rateBox">#5c9c13</color>
+
 
     <color name="text_title">#2e2e2e</color>
     <color name="text_p">#707070</color>

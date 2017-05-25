@@ -86,7 +86,7 @@ public class verifyEmailActivity extends BaseActivity {
                         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                         if (task.isSuccessful()) {
                             user.sendEmailVerification();
-                            DatabaseReference firebase = FirebaseDatabase.getInstance().getReference("users/" +user.getUid()+"/name");
+                            DatabaseReference firebase = FirebaseDatabase.getInstance().getReference("users/" +user.getUid());
                             firebase.child("name").setValue(name);
                             Toast.makeText(verifyEmailActivity.this, "We have send a verification email",
                                     Toast.LENGTH_SHORT).show();
