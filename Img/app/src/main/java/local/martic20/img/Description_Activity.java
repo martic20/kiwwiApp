@@ -38,13 +38,14 @@ public class Description_Activity extends AppCompatActivity {
     private Toolbar myToolbar;
 
     private int ID;
+    private String typeID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description_);
         ID = getIntent().getIntExtra("ID", 0);
-
+        typeID = getIntent().getStringExtra("type");
         name = (TextView) findViewById(R.id.name);
         desc = (TextView) findViewById(R.id.desc);
         type = (TextView) findViewById(R.id.type);
@@ -64,7 +65,7 @@ public class Description_Activity extends AppCompatActivity {
         };
 
         database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("plats/" + String.valueOf(ID));
+        myRef = database.getReference(typeID+"/"+String.valueOf(ID));
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -75,7 +76,7 @@ public class Description_Activity extends AppCompatActivity {
                 desc.setText(dataSnapshot.child("desc").getValue(String.class));
                 price.setText(dataSnapshot.child("price").getValue(String.class));
                 type.setText(dataSnapshot.child("type").getValue(String.class));
-                img.setImageResource(Elements.getImgId(ID));
+                img.setImageResource(Elements.getImgId(Integer.valueOf(dataSnapshot.child("img").getValue(String.class))));
                 findViewById(R.id.loading).setVisibility(View.GONE);
                 findViewById(R.id.img).setVisibility(View.VISIBLE);
             }
@@ -127,6 +128,13 @@ public class Description_Activity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void order (View view){
+        Toast.makeText(Description_Activity.this, "Order registered",
+                Toast.LENGTH_SHORT).show();
+        findViewById(R.id.order).setVisibility(View.GONE);
+        findViewById(R.id.cr).setVisibility(View.VISIBLE);
     }
 
     @Override

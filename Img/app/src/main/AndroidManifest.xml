@@ -25,7 +25,8 @@
         <activity android:name=".InitialScreen" />
         <activity android:name=".About" />
         <activity android:name=".verifyEmailActivity" />
-        <activity android:name=".Description_Activity"></activity>
+        <activity android:name=".Description_Activity" />
+        <activity android:name=".menuActivity"></activity>
     </application>
 
 </manifest>

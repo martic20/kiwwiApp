@@ -10,11 +10,11 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
-        android:title=""
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
         android:elevation="4dp"
+        android:title=""
 
         />
 
@@ -126,6 +126,34 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+
+                app:cardBackgroundColor="@color/blue"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order"
+                        android:textSize="24sp"
+                        android:textColor="@color/white"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:onClick="order" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -133,6 +161,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
+                android:visibility="gone"
                 app:cardBackgroundColor="@color/rateBox"
                 app:cardCornerRadius="40dp"
                 app:cardElevation="4dp">

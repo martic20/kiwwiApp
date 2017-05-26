@@ -41,6 +41,14 @@ public class Elements {
                 return R.drawable.dish3;
             case 3:
                 return R.drawable.dish4;
+            case 4:
+                return R.drawable.dessert5;
+            case 5:
+                return R.drawable.dessert6;
+            case 6:
+                return R.drawable.drink7;
+            case 7:
+                return R.drawable.drink8;
         }
         return R.drawable.logo;
     }

@@ -43,7 +43,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ElementViewHolder>
         public void onClick(View v) {
             if (v.getId() == order.getId()){
                Intent intent= new Intent(v.getContext(), Description_Activity.class);
-
+                intent.putExtra("type",menuActivity.type);
                 intent.putExtra("ID", getAdapterPosition());
                 v.getContext().startActivity(intent);
 

@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,15 +23,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
 public class InitialScreen extends AppCompatActivity {
 
 
-    private static final String TAG = "Menu";
-    private static Context mContext;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private FirebaseDatabase database;
@@ -42,16 +39,14 @@ public class InitialScreen extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
     private List<Elements> dishes;
 
-    public static Context getContext() {
-        return mContext;
-    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_menu2);
 
-        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -68,51 +63,24 @@ public class InitialScreen extends AppCompatActivity {
 
         mAuth.addAuthStateListener(mAuthListener);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-        mRecyclerView.setHasFixedSize(true);
-
-        mLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-
         database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("plats");
 
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                dishes = new ArrayList<>();
-                for (DataSnapshot e : dataSnapshot.getChildren()) {
-                    dishes.add(new Elements(e.child("name").getValue().toString(), e.child("img").getValue().toString()));
-                }
-                if (!dishes.isEmpty()) {
-                    findViewById(R.id.loading).setVisibility(View.GONE);
-                    mAdapter = new MyAdapter(dishes);
-                    mRecyclerView.setAdapter(mAdapter);
-
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-                Toast.makeText(InitialScreen.this, "Database error!!" + error.getCode(),
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
 
         DatabaseReference userName = database.getReference("users");
         userName.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-                if (currentUser!=null) {
-                   myToolbar.setTitle(dataSnapshot.child(currentUser.getUid()).child("name").getValue().toString());
+                if (currentUser != null) {
+                    TextView t = (TextView) findViewById(R.id.intro);
+                    t.setText("Hi "+dataSnapshot.child(currentUser.getUid()).child("name").getValue().toString()+"!");
 
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(InitialScreen.this, "Database error: "+databaseError.getMessage(),
+                Toast.makeText(InitialScreen.this, "Database error: " + databaseError.getMessage(),
                         Toast.LENGTH_SHORT).show();
             }
         });
@@ -163,6 +131,24 @@ public class InitialScreen extends AppCompatActivity {
                 .setNegativeButton("No", dialogClickListener).show();
     }
 
+    public void dessert(View v) {
+        Intent intent = new Intent(v.getContext(), menuActivity.class);
+        intent.putExtra("type", "Dessert");
+        v.getContext().startActivity(intent);
+    }
+
+    public void drink(View v) {
+        Intent intent = new Intent(v.getContext(), menuActivity.class);
+        intent.putExtra("type", "Drink");
+        v.getContext().startActivity(intent);
+    }
+
+    public void maincourse(View v) {
+        Intent intent = new Intent(v.getContext(), menuActivity.class);
+        intent.putExtra("type", "Main course");
+        v.getContext().startActivity(intent);
+    }
+
     public void logOut() {
         mAuth.signOut();
         finish();
@@ -183,7 +169,7 @@ public class InitialScreen extends AppCompatActivity {
                 logOut();
                 return true;
             case R.id.about:
-                startActivity(new Intent(InitialScreen.this,About.class));
+                startActivity(new Intent(InitialScreen.this, About.class));
                 return true;
             default:
                 // If we got here, the user's action was not recognized.
