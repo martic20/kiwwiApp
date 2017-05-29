@@ -58,14 +58,14 @@ public class InitialScreen extends AppCompatActivity {
 
         myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+        getSupportActionBar().setTitle("Kiwwi");
         myToolbar.inflateMenu(R.menu.toolbar_menu);
         myToolbar.setTitleTextColor(0xEEEEEEEE);
 
+
         mAuth.addAuthStateListener(mAuthListener);
 
-        database = FirebaseDatabase.getInstance();
-
-
+        database = Database.getDatabase();
         DatabaseReference userName = database.getReference("users");
         userName.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

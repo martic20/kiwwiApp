@@ -125,7 +125,7 @@ public class EmailPasswordActivity extends BaseActivity  {
         }
     }
 
-    protected void login(View view) {
+    public void loginEvent(View view) {
         if (!validateForm()) {
             return;
         }

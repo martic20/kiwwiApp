@@ -63,6 +63,7 @@ public class menuActivity extends AppCompatActivity {
 
         myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+        getSupportActionBar().setTitle("Menu");
         myToolbar.inflateMenu(R.menu.toolbar_menu);
         myToolbar.setTitleTextColor(0xEEEEEEEE);
 
@@ -74,7 +75,7 @@ public class menuActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        database = FirebaseDatabase.getInstance();
+        database = Database.getDatabase();
         myRef = database.getReference(type);
 
         myRef.addValueEventListener(new ValueEventListener() {
@@ -95,24 +96,6 @@ public class menuActivity extends AppCompatActivity {
             @Override
             public void onCancelled(DatabaseError error) {
                 Toast.makeText(menuActivity.this, "Database error!!" + error.getCode(),
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        DatabaseReference userName = database.getReference("users");
-        userName.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-                if (currentUser!=null) {
-                    myToolbar.setTitle(dataSnapshot.child(currentUser.getUid()).child("name").getValue().toString());
-
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(menuActivity.this, "Database error: "+databaseError.getMessage(),
                         Toast.LENGTH_SHORT).show();
             }
         });

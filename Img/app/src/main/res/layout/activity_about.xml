@@ -69,12 +69,7 @@
                 android:text="“Kiwwi is about the combined efforts of chefs, cooks, servers, farmers, vineyards, and brewers and I see that partnership extending to our guests by providing the highest quality food and service in a warm and welcoming environment”"
                 android:textSize="22sp" />
 
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="match_parent"
-                android:layout_height="260dp"
-                android:scaleType="center"
-                app:srcCompat="@drawable/place" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"

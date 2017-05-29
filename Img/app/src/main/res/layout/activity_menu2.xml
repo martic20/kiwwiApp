@@ -15,7 +15,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
         android:elevation="4dp"
-        android:title=""
+        android:title="Kiwwi"
         />
 
 
@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="30dp"
-                android:text="Hola!"
+                android:text="Hi!"
                 android:textAlignment="center"
                 android:textSize="26sp" />
 

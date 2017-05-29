@@ -44,8 +44,10 @@ public class Description_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description_);
+
         ID = getIntent().getIntExtra("ID", 0);
         typeID = getIntent().getStringExtra("type");
+
         name = (TextView) findViewById(R.id.name);
         desc = (TextView) findViewById(R.id.desc);
         type = (TextView) findViewById(R.id.type);
@@ -64,7 +66,7 @@ public class Description_Activity extends AppCompatActivity {
             }
         };
 
-        database = FirebaseDatabase.getInstance();
+        database = Database.getDatabase();
         myRef = database.getReference(typeID+"/"+String.valueOf(ID));
 
         myRef.addValueEventListener(new ValueEventListener() {
@@ -76,7 +78,7 @@ public class Description_Activity extends AppCompatActivity {
                 desc.setText(dataSnapshot.child("desc").getValue(String.class));
                 price.setText(dataSnapshot.child("price").getValue(String.class));
                 type.setText(dataSnapshot.child("type").getValue(String.class));
-                img.setImageResource(Elements.getImgId(Integer.valueOf(dataSnapshot.child("img").getValue(String.class))));
+                img.setImageResource(Elements.getImgId(dataSnapshot.child("img").getValue(Integer.class)));
                 findViewById(R.id.loading).setVisibility(View.GONE);
                 findViewById(R.id.img).setVisibility(View.VISIBLE);
             }
@@ -90,20 +92,19 @@ public class Description_Activity extends AppCompatActivity {
 
         myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+        getSupportActionBar().setTitle("Description");
         myToolbar.inflateMenu(R.menu.toolbar_menu);
         myToolbar.setTitleTextColor(0xEEEEEEEE);
-
-
 
         DatabaseReference userName = database.getReference("users");
         userName.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-                if (currentUser!=null) {
-                    myToolbar.setTitle(dataSnapshot.child(currentUser.getUid()).child("name").getValue().toString());
-
-                    rate.setRating(Float.parseFloat(dataSnapshot.child(currentUser.getUid()).child("valorations").child(String.valueOf(ID)).getValue().toString()));
+                if (currentUser!=null&&dataSnapshot.hasChild(currentUser.getUid())) {
+                    if(dataSnapshot.child(currentUser.getUid()).hasChild("valorations/"+typeID+"/"+ID)) {
+                        rate.setRating(Float.parseFloat(dataSnapshot.child(currentUser.getUid()).child("valorations").child(typeID).child(String.valueOf(ID)).getValue().toString()));
+                    }
                 }
             }
 
@@ -119,7 +120,7 @@ public class Description_Activity extends AppCompatActivity {
                 FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
                 if (currentUser!=null) {
                     DatabaseReference firebase = FirebaseDatabase.getInstance().getReference("users/" +currentUser.getUid()+"/valorations");
-                    firebase.child(String.valueOf(ID)).setValue(Math.round(rating));
+                    firebase.child(typeID+"/"+String.valueOf(ID)).setValue(Math.round(rating));
                     if(fromUser){Toast.makeText(Description_Activity.this, "Valoration saved, "+Math.round(rating),
                             Toast.LENGTH_SHORT).show();}
                 }else{
